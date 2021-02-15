@@ -1,5 +1,6 @@
 package com.tkapps.social.service.user.controller;
 
+import com.tkapps.social.service.user.model.DTO.UserDTO;
 import com.tkapps.social.service.user.model.User;
 import com.tkapps.social.service.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class UserController {
     }
 
     @PostMapping("")
-    public User saveUser(@RequestBody User user) {
+    public User saveUser(@RequestBody UserDTO user) {
         return userService.save(user);
     }
 
