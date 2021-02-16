@@ -1,33 +1,32 @@
 package com.tkapps.social.service.user.controller;
 
 import com.tkapps.social.service.user.model.DTO.UserDTO;
-import com.tkapps.social.service.user.model.User;
+import com.tkapps.social.service.user.model.Users;
 import com.tkapps.social.service.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/user")
+@RequestMapping(path = "/users")
 public class UserController {
 
     @Autowired
     UserService userService;
 
     @GetMapping("")
-    public List<User> getUsers() {
+    public List<Users> getUsers() {
         return userService.findAll();
     }
 
     @PostMapping("")
-    public User saveUser(@RequestBody UserDTO user) {
+    public Users saveUser(@RequestBody UserDTO user) {
         return userService.save(user);
     }
 
     @GetMapping("/{id}")
-    public User findUserById(@PathVariable("id") int userId) {
+    public Users findUserById(@PathVariable("id") int userId) {
         return userService.findByUserId(userId);
     }
 
