@@ -1,4 +1,5 @@
 # user-service API
+[:books: Documentation][documentation] <br />
 This is a user service API for my future social media-esque website
 
 
@@ -15,3 +16,6 @@ This is a user service API for my future social media-esque website
 
 ## Database
 > **Heroku Postgres**. I am (against microservices best practices) using the same db for both my message and users data
+
+
+[documentation]:https://user-service-tk.herokuapp.com/swagger-ui.html
